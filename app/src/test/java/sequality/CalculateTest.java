@@ -13,25 +13,25 @@ public class CalculateTest {
 
   public void testAve() {
     Calculate calculate = new Calculate();
-    double expecteds = 2.5;
-    assertEquals(expecteds, Calculate.sumTo(2, 3));
+    double expected = 2.5;
+    assertEquals(expected, calculate.ave(2.0, 3.0), 0);
   }
 
   public void testSumTo() {
     Calculate calculate = new Calculate();
     int expected = 55;
-    asserEquals(expected, Calculate.sumTo(1, 10));
+    assertEquals(expected, calculate.sumTo(1, 10));
   }
 
   public void testSumOdd() {
     Calculate calculate = new Calculate();
     int expected = 25;
-    assertEquals(expecteds, Calculate.sumOdd(1, 10));
+    assertEquals(expected, calculate.sumOdd(1, 10));
   }
 
   public void testSumEven() {
     Calculate calculate = new Calculate();
     int expected = 30;
-    assertEquals(expecteds, Calculate.sumEven(1, 10));
+    assertEquals(expected, calculate.sumEven(1, 10));
   }
 }

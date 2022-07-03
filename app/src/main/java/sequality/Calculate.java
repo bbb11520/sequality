@@ -2,7 +2,6 @@ package sequality;
 
 public class Calculate {
   public double ave(double x, double y) {
-
     return x / y;
   }
 
