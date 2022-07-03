@@ -4,11 +4,29 @@
 package sequality;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+  public String getGreeting() {
+    return "Hello World!";
+  }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+  public static void main(String[] args) {
+    int x = 2, y = 3;
+    int a = 1, b = 10;
+    int sumA, sumB, sumOdd, sumEven;
+    double aveA, aveB;
+
+    sumA = new Calculate().sum(x, y);
+    aveA = new Calculate().ave((double)sumA, (double)2);
+
+    sumB = new Calculate().sumTo(a, b);
+    aveB = new Calculate().ave((double)sumB, (double)(b-a+1));
+
+    sumOdd = new Calculate().sumOdd(a, b);
+    sumEven = new Calculate().sumEven(a, b);
+
+    System.out.println(new App().getGreeting());
+    System.out.println("Sum of " + x + " and " + y + " is " + sumA + ". Average is" + aveA + ".");
+    System.out.println("Sum of " + a + " to " + b + " is " + sumB + ". Average is " + aveB);
+    System.out.println("Sum of odd of" + a + " to " + b + " is " + sumOdd + ". Sum of even is " + sumEven);
+
+  }
 }
